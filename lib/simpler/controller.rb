@@ -15,13 +15,7 @@ module Simpler
       @request.env['simpler.controller'] = self
       @request.env['simpler.action'] = action
 
-      query_id
-
-      p '+++++++++++++++++++++++'
-      p @request
-      p @request.params
-      p @request.params[:id]
-      p '+++++++++++++++++++++++'
+      id_in_path
 
       send(action)
       set_default_headers
@@ -36,7 +30,7 @@ module Simpler
       response
     end
 
-    def query_id
+    def id_in_path
       id = @request.env['PATH_INFO'].split('/').last.to_i
       @request.params[:id] = id if id > 0
     end

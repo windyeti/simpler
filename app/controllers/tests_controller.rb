@@ -7,7 +7,6 @@ class TestsController < Simpler::Controller
   end
 
   def create
-    # render plain: "----- Plain text response. Create ----\n"
   end
 
   def show
