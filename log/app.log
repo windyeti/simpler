@@ -71,3 +71,88 @@ Request: GET /tests/147?mamom=kukun
 Handler: TestsController#show
 Parameters: {"mamom"=>"kukun"}
 Response: 200 [text/html] tests/show.html.erb
+I, [2019-08-25T08:57:48.450418 #23349]  INFO -- : 
+Request: GET /tests
+Handler: TestsController#index
+Parameters: {}
+Response: 200 [text/plain] tests/index.html.erb
+I, [2019-08-25T09:16:35.955544 #72848]  INFO -- : 
+Request: GET /tests
+Handler: TestsController#index
+Parameters: {}
+Response: 200 [text/plain] .html.erb
+I, [2019-08-25T09:19:00.370766 #78070]  INFO -- : 
+Request: GET /tests
+Handler: TestsController#index
+Parameters: {}
+Response: 200 [text/plain] 
+I, [2019-08-25T09:19:33.279814 #78070]  INFO -- : 
+Request: GET /tests?egor=ku
+Handler: TestsController#index
+Parameters: {"egor"=>"ku"}
+Response: 200 [text/plain] 
+I, [2019-08-25T09:21:12.454639 #78070]  INFO -- : 
+Request: GET /tests
+Handler: TestsController#index
+Parameters: {}
+Response: 200 [text/plain] 
+I, [2019-08-25T09:21:23.424799 #78070]  INFO -- : 
+Request: GET /tests?one=1
+Handler: TestsController#index
+Parameters: {"one"=>"1"}
+Response: 200 [text/plain] 
+I, [2019-08-25T09:21:59.073364 #78070]  INFO -- : 
+Request: GET /tests/123?two=2
+Handler: TestsController#show
+Parameters: {"two"=>"2"}
+Response: 200 [text/html] .html.erb
+I, [2019-08-25T09:23:24.687283 #78070]  INFO -- : 
+Request: GET /tests/123
+Handler: TestsController#show
+Parameters: {}
+Response: 200 [text/html] .html.erb
+I, [2019-08-25T09:35:46.744013 #17367]  INFO -- : 
+Request: GET /tests/345?egor=ku
+Handler: TestsController#show
+Parameters: {"egor"=>"ku"}
+Response: 200 [text/html] .html.erb
+I, [2019-08-25T09:36:27.437454 #19595]  INFO -- : 
+Request: GET /tests/345?egor=ku
+Handler: TestsController#show
+Parameters: {"egor"=>"ku"}
+Response: 200 [text/html] .html.erb
+I, [2019-08-25T09:40:08.307418 #28200]  INFO -- : 
+Request: GET /tests/345?egor=ku
+Handler: TestsController#show
+Parameters: {"egor"=>"ku"}
+Response: 200 [text/html] .html.erb
+I, [2019-08-25T09:47:06.573763 #44689]  INFO -- : 
+Request: GET /tests/345?egor=ku
+Handler: TestsController#show
+Parameters: {"egor"=>"ku"}
+Response: 200 [text/html] .html.erb
+I, [2019-08-25T09:52:37.826787 #57847]  INFO -- : 
+Request: GET /tests/345?egor=ku
+Handler: TestsController#show
+Parameters: {"egor"=>"ku"}
+Response: 200 [text/html] tests/show.html.erb
+I, [2019-08-25T09:53:03.671964 #57847]  INFO -- : 
+Request: GET /tests?egor=ku
+Handler: TestsController#index
+Parameters: {"egor"=>"ku"}
+Response: 200 [text/plain] 
+I, [2019-08-25T09:57:08.657481 #68256]  INFO -- : 
+Request: GET /tests/258?egor=ku
+Handler: TestsController#show
+Parameters: {"egor"=>"ku"}
+Response: 200 [text/html] tests/show.html.erb
+I, [2019-08-25T09:58:11.657874 #71202]  INFO -- : 
+Request: GET /tests/258?egor=ku
+Handler: TestsController#show
+Parameters: {"egor"=>"ku"}
+Response: 200 [text/html] tests/show.html.erb
+I, [2019-08-25T09:59:11.201687 #73260]  INFO -- : 
+Request: GET /tests/258?egor=ku
+Handler: TestsController#show
+Parameters: {"egor"=>"ku"}
+Response: 200 [text/html] tests/show.html.erb

@@ -17,6 +17,12 @@ module Simpler
 
       query_id
 
+      p '+++++++++++++++++++++++'
+      p @request
+      p @request.params
+      p @request.params[:id]
+      p '+++++++++++++++++++++++'
+
       send(action)
       set_default_headers
       write_response

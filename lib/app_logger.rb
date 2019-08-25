@@ -11,9 +11,11 @@ class AppLogger
     @request = Rack::Request.new(env)
     result_for_log = writer_result_request(@request)
 
-    status, headers, body = @app.call(@request.env)
+    status, headers, body = @app.call(env)
 
-    result_for_log += "Response: #{status} [#{headers["Content-Type"]}] #{Simpler::View.new(@request.env).template_path_relative}"
+    path = Simpler::View.new(@request.env).template_path_relative
+    path = path.empty? ? '' : "#{path}.html.erb"
+    result_for_log += "Response: #{status} [#{headers["Content-Type"]}] #{path}"
 
     @logger.info(result_for_log)
     [status, headers, body]

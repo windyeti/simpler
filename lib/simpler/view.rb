@@ -17,7 +17,8 @@ module Simpler
     end
 
     def template_path_relative
-      "#{[controller.name, action].join('/')}.html.erb"
+      return '' if Controller.template_plain?(@env)
+      template || [controller.name, action].join('/')
     end
 
     private
