@@ -432,3 +432,23 @@ Request: GET /tests/258?qwer=ty
 Handler: TestsController#show
 Parameters: {"qwer"=>"ty"}
 Response: 200 [text/html] tests/show.html.erb
+I, [2019-08-27T20:49:55.541415 #46030]  INFO -- : 
+Request: GET /tests/365
+Handler: TestsController#show
+Parameters: {}
+Response: 200 [text/html] tests/show.html.erb
+I, [2019-08-27T21:09:59.600691 #94220]  INFO -- : 
+Request: GET /tests
+Handler: TestsController#index
+Parameters: {}
+Response: 200 [text/plain] 
+I, [2019-08-27T21:11:27.842709 #97643]  INFO -- : 
+Request: GET /tests
+Handler: TestsController#index
+Parameters: {}
+Response: 200 [text/plain] 
+I, [2019-08-27T21:20:22.378798 #19305]  INFO -- : 
+Request: GET /tests
+Handler: TestsController#index
+Parameters: {}
+Response: 200 [text/plain] 

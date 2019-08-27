@@ -19,11 +19,11 @@ module Simpler
         arr_path = path.split('/')
         return unless arr_template.size == arr_path.size
 
-        arr_compare = arr_template.map.with_index do |value, i|
-          if value.start_with?(':')
-            @params[value] = arr_path[i]
+        arr_compare = arr_template.map.with_index do |key, i|
+          if key.start_with?(':')
+            @params[key] = arr_path[i]
             arr_path[i]
-          elsif value == arr_path[i]
+          elsif key == arr_path[i]
             arr_path[i]
           else
             nil

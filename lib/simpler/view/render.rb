@@ -14,6 +14,7 @@ module Simpler
       def render
         template = @env['simpler.template']
 
+        return ErbRender.new(@template_path).result(@binding) if template.is_a?(String)
         return PlainRender.new(@env).result if !template.nil? && template.has_key?(:plain)
         return JsonRender.new(@env).result if !template.nil? && template.has_key?(:json)
         ErbRender.new(@template_path).result(@binding)

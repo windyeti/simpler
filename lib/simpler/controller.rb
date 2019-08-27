@@ -33,13 +33,14 @@ module Simpler
 
     def set_status
       template = @request.env['simpler.template']
+      return if template.is_a?(String)
       @response.status = @request.env['simpler.template'][:status] if !template.nil? && template.has_key?(:status)
     end
 
     def set_headers
       template = @request.env['simpler.template']
 
-      return @response['Content-Type'] = 'text/plain' if !template.nil? && template.has_key?(:plain)
+      return @response['Content-Type'] = 'text/plain' if template.is_a?(String) || (!template.nil? && template.has_key?(:plain))
       return @response['Content-Type'] = 'text/json' if !template.nil? && template.has_key?(:json)
       @response['Content-Type'] = 'text/html'
     end
