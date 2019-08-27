@@ -191,3 +191,244 @@ Request: GET /tests?egor=ku
 Handler: TestsController#index
 Parameters: {"egor"=>"ku"}
 Response: 200 [text/plain] 
+I, [2019-08-26T13:10:08.429036 #3770]  INFO -- : 
+Request: GET /tests
+Handler: TestsController#index
+Parameters: {}
+Response: 200 [text/plain] 
+I, [2019-08-26T13:57:01.920847 #17096]  INFO -- : 
+Request: GET /tests
+Handler: TestsController#index
+Parameters: {}
+Response: 201 [text/html] 
+I, [2019-08-26T15:04:52.074024 #77781]  INFO -- : 
+Request: GET /tests
+Handler: TestsController#index
+Parameters: {}
+Response: 201 [text/html] 
+I, [2019-08-26T15:25:35.859750 #26567]  INFO -- : 
+Request: GET /tests
+Handler: TestsController#index
+Parameters: {}
+Response: 201 [text/html] 
+I, [2019-08-26T15:26:03.560042 #27565]  INFO -- : 
+Request: GET /tests
+Handler: TestsController#index
+Parameters: {}
+Response: 201 [text/html] 
+I, [2019-08-26T15:30:23.322521 #37806]  INFO -- : 
+Request: GET /tests
+Handler: TestsController#index
+Parameters: {}
+Response: 201 [text/html] 
+I, [2019-08-26T16:13:16.001712 #39491]  INFO -- : 
+Request: GET /tests
+Handler: TestsController#index
+Parameters: {}
+Response: 201 [text/html] 
+I, [2019-08-26T16:14:48.323211 #43137]  INFO -- : 
+Request: GET /tests
+Handler: TestsController#index
+Parameters: {}
+Response: 201 [text/html] 
+I, [2019-08-26T17:07:15.129344 #67679]  INFO -- : 
+Request: GET /tests
+Handler: TestsController#index
+Parameters: {}
+Response: 201 [text/html] 
+I, [2019-08-26T17:30:56.419274 #12975]  INFO -- : 
+Request: GET /tests
+Handler: TestsController#index
+Parameters: {}
+Response: 201 [text/html] 
+I, [2019-08-26T17:31:52.728983 #26093]  INFO -- : 
+Request: GET /tests
+Handler: TestsController#index
+Parameters: {}
+Response: 201 [text/html] 
+I, [2019-08-26T17:35:15.557416 #33955]  INFO -- : 
+Request: POST /tests
+Handler: TestsController#create
+Parameters: {}
+Response: 201 [text/html] tests/create.html.erb
+I, [2019-08-27T08:07:47.399035 #5173]  INFO -- : 
+Request: GET /tests
+Handler: TestsController#index
+Parameters: {}
+Response: 201 [text/html] 
+I, [2019-08-27T08:08:00.547950 #5173]  INFO -- : 
+Request: GET /tests
+Handler: TestsController#index
+Parameters: {}
+Response: 201 [text/html] 
+I, [2019-08-27T09:09:39.567849 #5173]  INFO -- : 
+Request: GET /tests/123
+Handler: TestsController#show
+Parameters: {}
+Response: 201 [text/html] tests/show.html.erb
+I, [2019-08-27T11:32:51.894154 #93999]  INFO -- : 
+Request: GET /tests
+Handler: TestsController#index
+Parameters: {}
+Response: 201 [text/plain] 
+I, [2019-08-27T11:42:40.817810 #17527]  INFO -- : 
+Request: GET /tests
+Handler: TestsController#index
+Parameters: {}
+Response: 201 [] 
+I, [2019-08-27T11:43:39.513168 #19777]  INFO -- : 
+Request: GET /tests
+Handler: TestsController#index
+Parameters: {}
+Response: 201 [] 
+I, [2019-08-27T11:43:59.620767 #20570]  INFO -- : 
+Request: GET /tests
+Handler: TestsController#index
+Parameters: {}
+Response: 201 [sdfre] 
+I, [2019-08-27T12:23:20.891103 #14116]  INFO -- : 
+Request: GET /tests
+Handler: TestsController#index
+Parameters: {}
+Response: 201 [text/plain] 
+I, [2019-08-27T12:24:24.278992 #14116]  INFO -- : 
+Request: POST /tests
+Handler: TestsController#create
+Parameters: {}
+Response: 201 [text/html] controller/create.html.erb
+I, [2019-08-27T12:27:29.901813 #24012]  INFO -- : 
+Request: POST /tests
+Handler: TestsController#create
+Parameters: {}
+Response: 201 [text/html] tests/create.html.erb
+I, [2019-08-27T12:29:16.961982 #24012]  INFO -- : 
+Request: POST /tests?qwer=ty
+Handler: TestsController#create
+Parameters: {"qwer"=>"ty"}
+Response: 201 [text/html] tests/create.html.erb
+I, [2019-08-27T13:28:03.465004 #67770]  INFO -- : 
+Request: GET /tests?qwer=ty
+Handler: TestsController#index
+Parameters: {"qwer"=>"ty"}
+Response: 201 [text/plain] 
+I, [2019-08-27T13:28:39.624739 #69098]  INFO -- : 
+Request: GET /tests?qwer=ty
+Handler: TestsController#index
+Parameters: {"qwer"=>"ty"}
+Response: 201 [text/plain] 
+I, [2019-08-27T13:29:04.902910 #70279]  INFO -- : 
+Request: GET /tests?qwer=ty
+Handler: TestsController#index
+Parameters: {"qwer"=>"ty"}
+Response: 203 [text/plain] 
+I, [2019-08-27T14:15:48.212842 #82017]  INFO -- : 
+Request: GET /tests/258?qwer=ty
+Handler: TestsController#show
+Parameters: {"qwer"=>"ty"}
+Response: 200 [text/html] tests/show.html.erb
+I, [2019-08-27T14:20:54.152603 #93896]  INFO -- : 
+Request: GET /tests/258?qwer=ty
+Handler: TestsController#show
+Parameters: {"qwer"=>"ty"}
+Response: 200 [text/html] tests/show.html.erb
+I, [2019-08-27T14:21:31.179342 #95540]  INFO -- : 
+Request: GET /tests/258?qwer=ty
+Handler: TestsController#show
+Parameters: {"qwer"=>"ty"}
+Response: 200 [text/html] tests/show.html.erb
+I, [2019-08-27T14:22:31.160882 #97955]  INFO -- : 
+Request: GET /tests/258?qwer=ty
+Handler: TestsController#index
+Parameters: {"qwer"=>"ty"}
+Response: 203 [text/plain] 
+I, [2019-08-27T14:23:05.215259 #97955]  INFO -- : 
+Request: GET /tests
+Handler: TestsController#index
+Parameters: {}
+Response: 203 [text/plain] 
+I, [2019-08-27T14:23:05.581966 #97955]  INFO -- : 
+Request: GET /favicon.ico
+Handler: TestsController#index
+Parameters: {}
+Response: 203 [text/plain] 
+I, [2019-08-27T14:23:19.504934 #97955]  INFO -- : 
+Request: GET /tests/258?qwer=ty
+Handler: TestsController#index
+Parameters: {"qwer"=>"ty"}
+Response: 203 [text/plain] 
+I, [2019-08-27T14:23:19.634718 #97955]  INFO -- : 
+Request: GET /favicon.ico
+Handler: TestsController#index
+Parameters: {}
+Response: 203 [text/plain] 
+I, [2019-08-27T14:23:22.557366 #97955]  INFO -- : 
+Request: GET /tests/258?qwer=ty
+Handler: TestsController#index
+Parameters: {"qwer"=>"ty"}
+Response: 203 [text/plain] 
+I, [2019-08-27T14:23:22.718778 #97955]  INFO -- : 
+Request: GET /favicon.ico
+Handler: TestsController#index
+Parameters: {}
+Response: 203 [text/plain] 
+I, [2019-08-27T14:23:23.680122 #97955]  INFO -- : 
+Request: GET /tests/258?qwer=ty
+Handler: TestsController#index
+Parameters: {"qwer"=>"ty"}
+Response: 203 [text/plain] 
+I, [2019-08-27T14:23:23.836397 #97955]  INFO -- : 
+Request: GET /favicon.ico
+Handler: TestsController#index
+Parameters: {}
+Response: 203 [text/plain] 
+I, [2019-08-27T14:24:05.830800 #1702]  INFO -- : 
+Request: GET /tests/258?qwer=ty
+Handler: TestsController#show
+Parameters: {"qwer"=>"ty"}
+Response: 200 [text/html] tests/show.html.erb
+I, [2019-08-27T15:19:01.027553 #33922]  INFO -- : 
+Request: GET /tests/258?qwer=ty
+Handler: TestsController#show
+Parameters: {"qwer"=>"ty"}
+Response: 200 [text/html] tests/show.html.erb
+I, [2019-08-27T15:20:54.869911 #38438]  INFO -- : 
+Request: GET /tests/258?qwer=ty
+Handler: TestsController#show
+Parameters: {"qwer"=>"ty"}
+Response: 200 [text/html] tests/show.html.erb
+I, [2019-08-27T16:19:23.412538 #430]  INFO -- : 
+Request: GET /tests/258?qwer=ty
+Handler: TestsController#show
+Parameters: {"qwer"=>"ty"}
+Response: 200 [text/html] tests/show.html.erb
+I, [2019-08-27T16:53:26.978472 #81179]  INFO -- : 
+Request: GET /tests/258?qwer=ty
+Handler: TestsController#show
+Parameters: {"qwer"=>"ty"}
+Response: 200 [text/html] tests/show.html.erb
+I, [2019-08-27T17:25:42.656979 #57829]  INFO -- : 
+Request: GET /tests/258?qwer=ty
+Handler: TestsController#show
+Parameters: {"qwer"=>"ty"}
+Response: 200 [text/html] tests/show.html.erb
+I, [2019-08-27T17:26:22.307030 #59454]  INFO -- : 
+Request: GET /tests/258?qwer=ty
+Handler: TestsController#show
+Parameters: {"qwer"=>"ty"}
+Response: 200 [text/html] tests/show.html.erb
+I, [2019-08-27T17:32:59.902750 #75023]  INFO -- : 
+Request: GET /tests/258?qwer=ty
+Handler: TestsController#show
+Parameters: {"qwer"=>"ty"}
+Response: 200 [text/html] tests/show.html.erb
+I, [2019-08-27T17:43:50.596712 #668]  INFO -- : 
+Request: GET /test/258?qwer=ty
+Handler: not found
+Parameters: {"qwer"=>"ty"}
+Response: 404
+
+I, [2019-08-27T18:06:17.525067 #54434]  INFO -- : 
+Request: GET /tests/258?qwer=ty
+Handler: TestsController#show
+Parameters: {"qwer"=>"ty"}
+Response: 200 [text/html] tests/show.html.erb

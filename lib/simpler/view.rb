@@ -1,4 +1,4 @@
-require 'erb'
+require_relative 'view/render'
 
 module Simpler
   class View
@@ -10,15 +10,7 @@ module Simpler
     end
 
     def render(binding)
-      return @env['simpler.template'][:plain] if Controller.template_plain?(@env)
-      template = File.read(template_path)
-
-      ERB.new(template).result(binding)
-    end
-
-    def template_path_relative
-      return '' if Controller.template_plain?(@env)
-      template || [controller.name, action].join('/')
+      Render.new(@env, template_path, binding).render
     end
 
     private

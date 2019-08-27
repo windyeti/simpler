@@ -3,7 +3,7 @@ require_relative 'view'
 module Simpler
   class Controller
 
-    attr_reader :name, :request, :response
+    attr_reader :name
 
     def initialize(env)
       @name = extract_name
@@ -11,33 +11,19 @@ module Simpler
       @response = Rack::Response.new
     end
 
-    def make_response(action)
+    def make_response(action, params)
       @request.env['simpler.controller'] = self
       @request.env['simpler.action'] = action
-
-      id_in_path
+      @request.env['simpler.params'] = params
 
       send(action)
-      set_default_headers
+      set_status
+      set_headers
       write_response
 
-      # @response.status = 201
-      # @response['Content-Type'] = 'text/plain' if self.class.template_plain?(@request.env)
-
-      response = @response.finish
-      response[0] = 201 if action == 'create'
-      response[1]['Content-Type'] = 'text/plain' if self.class.template_plain?(@request.env)
-      response
+      @response.finish
     end
 
-    def id_in_path
-      id = @request.env['PATH_INFO'].split('/').last.to_i
-      @request.params[:id] = id if id > 0
-    end
-
-    def self.template_plain?(env)
-      env.has_key?('simpler.template') && env['simpler.template'].has_key?(:plain)
-    end
 
     private
 
@@ -45,7 +31,16 @@ module Simpler
       self.class.name.match('(?<name>.+)Controller')[:name].downcase
     end
 
-    def set_default_headers
+    def set_status
+      template = @request.env['simpler.template']
+      @response.status = @request.env['simpler.template'][:status] if !template.nil? && template.has_key?(:status)
+    end
+
+    def set_headers
+      template = @request.env['simpler.template']
+
+      return @response['Content-Type'] = 'text/plain' if !template.nil? && template.has_key?(:plain)
+      return @response['Content-Type'] = 'text/json' if !template.nil? && template.has_key?(:json)
       @response['Content-Type'] = 'text/html'
     end
 
@@ -60,7 +55,7 @@ module Simpler
     end
 
     def params
-      @request.params
+      @request.env['simpler.params']
     end
 
     def render(template)
