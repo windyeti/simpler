@@ -1,4 +1,4 @@
-require 'erb'
+require_relative 'view/render'
 
 module Simpler
   class View
@@ -10,9 +10,7 @@ module Simpler
     end
 
     def render(binding)
-      template = File.read(template_path)
-
-      ERB.new(template).result(binding)
+      Render.new(@env, template_path, binding).render
     end
 
     private

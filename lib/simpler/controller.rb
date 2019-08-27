@@ -3,7 +3,7 @@ require_relative 'view'
 module Simpler
   class Controller
 
-    attr_reader :name, :request, :response
+    attr_reader :name
 
     def initialize(env)
       @name = extract_name
@@ -11,16 +11,19 @@ module Simpler
       @response = Rack::Response.new
     end
 
-    def make_response(action)
+    def make_response(action, params)
       @request.env['simpler.controller'] = self
       @request.env['simpler.action'] = action
+      @request.env['simpler.params'] = params
 
-      set_default_headers
       send(action)
+      set_status
+      set_headers
       write_response
 
       @response.finish
     end
+
 
     private
 
@@ -28,7 +31,17 @@ module Simpler
       self.class.name.match('(?<name>.+)Controller')[:name].downcase
     end
 
-    def set_default_headers
+    def set_status
+      template = @request.env['simpler.template']
+      return if template.is_a?(String)
+      @response.status = @request.env['simpler.template'][:status] if !template.nil? && template.has_key?(:status)
+    end
+
+    def set_headers
+      template = @request.env['simpler.template']
+
+      return @response['Content-Type'] = 'text/plain' if template.is_a?(String) || (!template.nil? && template.has_key?(:plain))
+      return @response['Content-Type'] = 'text/json' if !template.nil? && template.has_key?(:json)
       @response['Content-Type'] = 'text/html'
     end
 
@@ -43,7 +56,7 @@ module Simpler
     end
 
     def params
-      @request.params
+      @request.env['simpler.params']
     end
 
     def render(template)

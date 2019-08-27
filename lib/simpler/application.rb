@@ -9,7 +9,7 @@ module Simpler
 
     include Singleton
 
-    attr_reader :db
+    attr_reader :db, :router
 
     def initialize
       @router = Router.new
@@ -28,10 +28,14 @@ module Simpler
 
     def call(env)
       route = @router.route_for(env)
+
+      return [404, {'Content-Type' => 'text/plain'}, ['Error 404. Page not found.']] if route.nil?
+
       controller = route.controller.new(env)
       action = route.action
+      params = route.params
 
-      make_response(controller, action)
+      make_response(controller, action, params)
     end
 
     private
@@ -50,8 +54,8 @@ module Simpler
       @db = Sequel.connect(database_config)
     end
 
-    def make_response(controller, action)
-      controller.make_response(action)
+    def make_response(controller, action, params)
+      controller.make_response(action, params)
     end
 
   end
